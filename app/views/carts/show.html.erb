@@ -1,5 +1,12 @@
 <section class="cart-show">
 
+<% if enhanced_cart.empty? %> <!-- changed the condition to check if enhanced_cart is empty -->
+  <div class="alert alert-info"> <!-- Using Bootstrap alert box for styling -->
+    <h1>Your Cart is Empty!</h1>
+    <%= link_to "Go to Homepage", root_path, class: "btn btn-primary" %> <!-- Using Bootstrap btn for styling -->
+  </div>
+<% else %>
+
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
@@ -48,5 +55,7 @@
       <% end %>
     </div>
   </div>
+
+<% end %>
 
 </section>
