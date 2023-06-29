@@ -1,0 +1,21 @@
+<tr>
+  <td>
+    <%= image_tag line_item.product.image.tiny.url, alt: line_item.product.name %>
+  </td>
+  <td>
+    <h4><%= line_item.product.name %></h4>
+    <br>
+    <p><%= line_item.product.description %></p>
+  </td>
+  <td>
+    <%= humanized_money_with_symbol line_item.total_price_cents/100.0 %>
+  </td>
+  <td>
+    <div>
+    <%= line_item.quantity %>
+    </div>
+  </td>
+  <td>
+    <%= humanized_money_with_symbol line_item.total_price_cents * line_item.quantity / 100.0 %>
+  </td>
+</tr>
