@@ -1,0 +1,29 @@
+// use styling for about page here!
+
+body {
+    font-family: Arial, sans-serif;
+    color: #555;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    color: #005500;
+    font-size: 2.5em;
+}
+h2 {
+    color: #007700;
+    font-size: 1.5em;
+}
+p {
+    line-height: 1.6em;
+    text-align: justify;
+}
+.highlight {
+    color: #007700;
+}
