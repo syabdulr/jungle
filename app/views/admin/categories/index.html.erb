@@ -1,0 +1,20 @@
+<section class="admin-categories-index">
+
+  <header class="page-header">
+    <h1 style="color: #1a1a2e; font-family: Arial; text-align: center;">Admin &raquo; All Categories</h1>
+  </header>
+
+  <div class="well" style="text-align: center; margin-top: 20px;">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info', style: 'background-color: #007bff; color: white; padding: 10px 24px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer;' %>
+  </div>
+
+  <div class="panel panel-default categories" style="width: 50%; margin: 0 auto; border: 1px solid #a6a6a6; border-radius: 5px; padding: 20px;">
+
+    <ul style="list-style: none;">
+      <% @categories.each do |category|%>
+        <li style="border-bottom: 1px solid #d9d9d9; padding: 10px 0;">  <%= category.name %> </li>
+      <% end %>
+    </ul>
+
+  </div>
+</section>

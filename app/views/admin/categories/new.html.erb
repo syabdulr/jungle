@@ -1,0 +1,36 @@
+<section class="admin-categories-new">
+
+  <header class="page-header">
+    <h1 style="color: #1a1a2e; font-family: Arial; text-align: center;">Admin &raquo; New Category</h1>
+  </header>
+
+  <div class="well" style="text-align: center; margin-top: 20px;">
+    <%= link_to 'All Categories', [:admin, :categories], class: 'btn btn-info', style: 'background-color: #007bff; color: white; padding: 10px 24px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer;' %>
+  </div>
+
+  <div class="row" style="display: flex; justify-content: center; align-items: center;">
+    <div class="col-sm-6">
+      <%= form_for [:admin, @category] do |form| %>
+        <% if form.object.errors.any? %>
+          <div class="alert alert-danger" style="color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; padding: 10px; margin-bottom: 10px;">
+            <strong>The following errors prevented saving:</strong>
+            <ul>
+              <% form.object.errors.full_messages.each do |error| %>
+                <li><%= error %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group" style="text-align: center;">
+          <%= form.label :name, style: 'font-size: 18px; color: #333;' %>
+          <%= form.text_field :name, class: 'form-control', style: 'margin-top: 10px; height: 40px; margin-left: auto; margin-right: auto; display: block; max-width: 400px;' %>
+        </div>
+        <div style="text-align: center;">
+          <%= form.submit 'Create Category', class: 'btn btn-primary', style: 'background-color: #007bff; color: white; padding: 10px 24px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer;' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</section>
