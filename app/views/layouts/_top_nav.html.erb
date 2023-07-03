@@ -50,6 +50,19 @@
           My Cart (<%= cart.size %>) <% end %>
         </li>
       </ul>
+
+      <% if current_user %>
+      <div class="user-info">
+        <span class="user-greeting">Signed in as <%= current_user.firstname %></span>
+        <%= link_to "Logout", '/logout', class: "btn btn-primary btn-logout" %>
+      </div>
+      <% else %>
+      <div class="auth-links">
+        <%= link_to 'Login', '/login', class: "btn btn-primary btn-login" %>
+        <%= link_to 'Sign Up', '/signup', class: "btn btn-outline-primary btn-signup" %>
+      </div>
+      <% end %>
+      
     </div>
   </div>
 </nav>
